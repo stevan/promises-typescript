@@ -19,7 +19,7 @@ p0.then(
 var p = Promises.when( p0, foo( 1200 ), foo( 2000 ) );
 
 var p2 = p.then(
-    function ( x ) { console.log( x, p.status(), p.result() ); return 'Heya'; },
+    function ( x, y, z ) { console.log( x, y, z, p.status(), p.result() ); return 'Heya'; },
     function () { console.log('ERROR') }
 ).then(
     function ( x ) { console.log( x, p.status(), p.result() ); return 'Hoya'; },
